@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@700&family=Ubuntu&display=swap');
+
+/* Header */
+
+header{
+    display: flex;
+    width: 100%;
+    /* offset-x | offset-y | blur-radius | color 
+    box-shadow: 0px 10px 15px black;*/
+}
+
+.containerLogo{
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 40px;
+}
+
+.iconeAgenda{
+    width: 74px;
+    height: 74px;
+    padding: 5px;
+}
+
+.txtAgenda{
+    font-family: 'Comfortaa', cursive;
+    font-size: 40px;
+    margin-right: 20px;
+}
+
+.containerNav{
+    width: 80%;
+    display: flex;
+    align-self: center;
+    justify-content: flex-end;
+}
+
+.buttonLupa{
+    background-color: white;
+    border: none;
+    margin: 30px;
+}
+
+.containerLupa {
+    align-self: center;
+    width:30%;
+    position: relative;
+    height: 50px;
+  }
+
+  .inputBusca {
+    height: 50px;
+    border: none;
+    outline: none;
+    padding-left: 50px;
+    width: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: none;
+    z-index: 3;
+    transition: width 1s ease-out;
+    cursor: pointer;
+  }
+
+  .inputBusca:focus{ 
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 100%;
+    z-index: 1;
+    transition: width 1s ease-in;
+  }
+
+  .btnBusca{ 
+    height: 50px;
+    width: 180px;
+    background: url('../src/lupas.png')  left no-repeat;
+    background-size: 40px;
+    border: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    cursor: pointer;
+  }
+  
+  .btnBusca:focus {
+    outline: none;
+  }
+
+  /* esconde o LABEL "Buscar" */
+  .labelBusca {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    border: 0;	
+  }
+
+.iconesNav{
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.buttonCriar{
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border: none;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 14px;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.txtOpcoes{
+    font-family: 'Comfortaa', cursive;
+    font-size: 14px;
+    text-align: center;
+    margin: 30px;
+    background-color: white;
+    border: none;
+    cursor: pointer;
+}
+
+main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.containerCalendario{
+    width: 95%;
+}
+
+.btnHoje{
+    background-color: #F25C1E;
+    font-family: 'Comfortaa', cursive;
+}
+
+footer{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    margin: 15px 0;
+}
+
+.logoSB{
+    width: 50px;
+    margin: 0 10px;
+}
+
+.txtFooter{
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+}

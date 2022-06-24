@@ -1,0 +1,56 @@
+.content {
+    margin: 0 auto;
+    max-width: 900px;
+    padding: 10px;
+    z-index: 15;
+}
+
+.btn {
+    align-items: center;
+    border: none;
+    text-align: center;
+    font-family: 'Comfortaa', cursive;
+    font-size: 14px;
+    margin: 10px;
+    cursor: pointer;    
+}
+
+.btnFechar{
+    border: none;
+    text-align: right;
+}
+
+.modal {
+    background-color: rgba(0, 0, 0, .8);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: none;
+    z-index: 4;
+}
+
+.modal-content {
+    margin: 0 auto;
+    margin-top: 3%;
+    max-width: 600px;
+    background-color: #eee;
+    padding: 0;
+    box-shadow: 0 0 2px #fff;
+}
+
+.modal-header{
+    background-color: F1F3F4;
+    font-weight: bold;
+    text-align: right;
+}
+
+.modal-header, .modal-body{
+    padding: 10px;
+}
+
+.modal-body{
+    background-color: #fff;
+}
+

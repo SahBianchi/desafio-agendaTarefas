@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/styleModal.css">
+
+    <title>Modal</title>
+</head>
+<body>
+
+    <div class="content">
+                
+        <button class="btn buttonCriar" onclick="openModal('dv-modal')">
+            
+        </button>
+
+        <div id="dv-modal" class="modal">
+            
+            <div class="modal-content">
+
+                <div class="modal-header">
+                    <button class="btn btnFechar" onclick="closeModal('dv-modal')">X</button>
+                </div>
+    
+                <div class="modal-body">
+                    <form action="">
+                        <input type="text" id="titulo" name="titulo" value="" placeholder="Adicionar título"><br><br>
+
+                        <textarea name="descricao" id="descricao" value="" cols="30" rows="10" placeholder="Adicionar descrição"></textarea><br><br>
+
+                        <p>Data e hora do inicio da tarefa</p>
+                        <input type="datetime-local" id="dataInicio" value=""><br><br>
+                        
+                        <p>Data e hora do fim da tarefa</p>
+                        <input type="datetime-local" id="dataFim" value=""><br><br>
+
+                        <button id="botaoSalvarEvento">Salvar</button>
+                      </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+    
+</body>
+</html>

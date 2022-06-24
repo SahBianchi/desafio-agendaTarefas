@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="./Front/css/style.css">
+    <link rel="preload" href="style.css">
+    <link rel="stylesheet" href="./Front/css/styleModal.css">
+
+    <link href='./node_modules/fullcalendar/main.css'rel='stylesheet' />
+    <script src='./node_modules/fullcalendar/main.js'></script>
+    <script src="./node_modules/fullcalendar/locales/pt-br.js"></script>
+    
+    <title>Agenda</title>
+</head>
+<body>
+    <header>
+        <div class="containerLogo">
+
+            <img src="./Front/src/calendar.png" alt="calendario" class="iconeAgenda">
+            <h1 class="txtAgenda">Agenda</h1>
+
+        </div>
+
+        <div class="containerNav">
+
+            <div class="containerLupa ">
+
+                <button type="submit" class="btnBusca">
+                    <!-- <img src="./Front/src/lupas.png" alt="lupa" class="iconesNav"> -->
+                    <label for="buscaTitulo" class="labelBusca">Busca Titulo</label>
+                    <input type="text" placeholder="Digite o titulo do evento" class="inputBusca">
+                </button>
+
+            </div>
+
+            <div>
+
+                <button class="btn buttonCriar" onclick="openModal('dv-modal')">
+                    <img src="./Front/src/positive-sign.png" alt="Criar" class="iconesNav">
+                    Criar
+                </button>
+    
+                <div id="dv-modal" class="modal">
+                    
+                    <div class="modal-content">
+    
+                        <div class="modal-header">
+                            <button class="btn btnFechar" onclick="closeModal('dv-modal')">X</button>
+                        </div>
+            
+                        <div class="modal-body">
+                            <form action="">
+                                <input type="text" id="titulo" name="titulo" value="" placeholder="Adicionar título"><br><br>
+    
+                                <textarea name="descricao" id="descricao" value="" cols="30" rows="10" placeholder="Adicionar descrição"></textarea><br><br>
+    
+                                <p>Data e hora do inicio da tarefa</p>
+                                <input type="datetime-local" id="dataInicio" value=""><br><br>
+                                
+                                <p>Data e hora do fim da tarefa</p>
+                                <input type="datetime-local" id="dataFim" value=""><br><br>
+    
+                                <button id="botaoSalvarEvento" onclick="closeModal('dv-modal')">Salvar</button>
+                              </form>
+                        </div>
+    
+                    </div>
+                </div>
+
+            </div>
+
+            <div>
+
+                <select name="select" class="txtOpcoes" id="visualizacaoAgenda">
+                    <option value="dia">Dia</option>
+                    <option value="semana">Semana</option>
+                    <option value="mes" selected >Mês</option>
+                  </select>
+
+            </div>
+                                    
+
+
+        </div>
+
+    </header>
+
+    <main>
+        <div id='calendar' class="containerCalendario"></div>
+    </main>
+
+    <footer>
+        <p class="txtFooter">Produzido por</p>
+        <p><img src="./Front/src/logo-sambianchi.png" alt="Logo Samantha Bianchi" class="logoSB"></p>
+        <p class="txtFooter"><a href="https://www.linkedin.com/in/sahbianchi/" target="_blank">Samantha Bianchi </a> - Calendário da <a href="https://fullcalendar.io/" target="_blank">FullCalendar</a></p>        
+    </footer>
+
+    <script src="./Front/js/modalCriacao.js"></script>
+    <script src="./Front/js/calendario.js"></script>
+    <!-- <script src="./Front/js/calendarioPtBr.js"></script> -->
+
+</body>
+</html>
